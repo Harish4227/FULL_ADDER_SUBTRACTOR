@@ -1,4 +1,4 @@
-# FULL_ADDER_SUBTRACTOR
+![Screenshot 2024-12-02 165446](https://github.com/user-attachments/assets/e8053a20-833a-44ce-94da-c82897d8c4ad)# FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
@@ -46,10 +46,39 @@ Write the detailed procedure here
 
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
+module full_add_sub(sum,cout,a,b,cin);
+ 
+ output sum;
+ 
+ output cout;
+ 
+ input a;
+ 
+ input b;
+ 
+ input cin;
+ 
+ wire W1,W2,W3;
+ 
+ assign W1=a^b;
+ 
+ assign W2=a&b;
+ 
+ assign W3=W1&cin;
+ 
+ assign sum=W1^cin;
+ 
+ assign cout=W2|W3;
+ 
+ endmodule
 
 **RTL Schematic**
+![image](https://github.com/user-attachments/assets/6fda71a3-12cd-45c0-9eb6-790e607f59a8)
+
+
 
 **Output Timing Waveform**
+![image](https://github.com/user-attachments/assets/431f5da2-4434-432a-8fd0-c96497c401a9)
 
 **Result:**
 
